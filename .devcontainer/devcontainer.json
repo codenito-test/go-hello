@@ -1,0 +1,62 @@
+{
+	"dockerComposeFile": "./docker-compose.yaml",
+	"service": "go-hello",
+	"workspaceFolder": "/workspace",
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"files.eol": "\n",
+		"remote.extensionKind": {
+			"ms-azuretools.vscode-docker": "workspace"
+		},
+		"go.gopath": "/go",
+		"go.useLanguageServer": true,
+		"go.autocompleteUnimportedPackages": true,
+		"go.gotoSymbol.includeImports": true,
+		"go.gotoSymbol.includeGoroot": true,
+		"gopls": {
+			"completeUnimported": true,
+			"deepCompletion": true,
+			"usePlaceholders": true
+		},
+		"go.lintTool": "golangci-lint",
+		"go.buildOnSave": "workspace",
+		"go.lintOnSave": "workspace",
+		"go.vetOnSave": "workspace",
+		"editor.formatOnSave": true,
+		"[go]": {
+			"editor.codeActionsOnSave": {
+				"source.organizeImports": true
+			}
+		},
+		"go.toolsEnvVars": {
+			"GOFLAGS": "-tags=",
+			"CGO_ENABLED": 1 // for the race detector
+		},
+		"gopls.env": {
+			"GOFLAGS": "-tags="
+		},
+		"go.testEnvVars": {},
+		"go.testFlags": [
+			"-v",
+			"-race"
+		],
+		"go.testTimeout": "10s",
+		"go.coverOnSingleTest": true,
+		"go.coverOnSingleTestFile": true
+	},
+	"extensions": [
+		"golang.Go",
+		"ms-vscode.go",
+		"dbaeumer.vscode-eslint",
+		"davidanson.vscode-markdownlint",
+		"ms-azuretools.vscode-docker",
+		"shardulm94.trailing-spaces",
+		"Gruntfuggly.todo-tree",
+		"bierner.emojisense",
+		"stkb.rewrap",
+		"vscode-icons-team.vscode-icons",
+		"redhat.vscode-yaml",
+		"IBM.output-colorizer",
+		"ms-vscode-remote.remote-containers"
+	]
+}
